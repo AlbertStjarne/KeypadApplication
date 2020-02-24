@@ -4,16 +4,41 @@ import NonDigitButton from './NonDigitButton';
 import CodeOutputBox from './CodeOutputBox';
 import './DigitArea.css';
 
+const startArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '', '', '', '', '', ''];
+
 class DigitArea extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      digitAreaKeys: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '', '', '', '', '', ''],
+      digitAreaKeys: [],
       enteredCode: [],
     };
 
+    this.randomizeArrayValues = this.randomizeArrayValues.bind(this);
     this.saveDigitInput = this.saveDigitInput.bind(this);
+  }
+
+  componentDidMount() {
+    this.randomizeArrayValues(startArray);
+  }
+
+  // randomize values within an array
+  randomizeArrayValues(array) {
+    let counter = array.length;
+    let temp;
+    let index;
+
+    while (counter > 0) {
+      index = Math.floor(Math.random() * counter);
+      counter--;
+      temp = array[counter];
+      array[counter] = array[index];
+      array[index] = temp;
+    }
+    this.setState({
+      digitAreaKeys: array,
+    });
   }
 
   // saving entered digit to state
