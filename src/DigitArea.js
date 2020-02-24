@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DigitButton from './DigitButton';
 import NonDigitButton from './NonDigitButton';
+import LoginButton from './LoginButton';
 import CodeOutputBox from './CodeOutputBox';
 import './DigitArea.css';
 
@@ -67,6 +68,9 @@ class DigitArea extends Component {
               );
             }
           })}
+        </div>
+        <div className='loginAndClear'>
+          <LoginButton enteredCode={this.state.enteredCode} />
         </div>
       </div>
     );

@@ -13,3 +13,7 @@
   color: #707070;
   padding: 117px 74px 40px 82px;
 }
+
+.loginAndClear {
+  display: flex;
+}

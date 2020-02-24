@@ -1,0 +1,19 @@
+.loginButton {
+  background-color: #009681;
+  width: 255px;
+  height: 44px;
+  border-radius: 6px;
+  margin: 16px 7px 0 20px;
+  align-items: flex-start;
+  text-align: center;
+  font: 20px/27px 'Open Sans';
+  letter-spacing: 0;
+  opacity: 0.5;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.loginButton:active {
+  opacity: 1;
+}
