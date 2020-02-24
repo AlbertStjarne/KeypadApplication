@@ -35,7 +35,7 @@ The page will reload if you make code edits.
 
 Keypad application
 
-<img src="xyz.png" width=650>
+<img src="keypad_application.gif" width=500>
 
 Clicking `Logga in` with no code entered and with code entered
 
