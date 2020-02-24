@@ -10,3 +10,8 @@
   color: #000000;
   outline: none;
 }
+
+.digitButton:active {
+  background-color: #009681;
+  opacity: 0.35;
+}
