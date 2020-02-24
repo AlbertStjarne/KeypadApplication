@@ -1,3 +1,13 @@
 .App {
   text-align: center;
+  background-color: #efefef;
+  width: 414px;
+  height: 736px;
+  margin: 10vh auto;
+}
+
+@media (max-width: 1000px) {
+  .App {
+    margin: 0 auto;
+  }
 }

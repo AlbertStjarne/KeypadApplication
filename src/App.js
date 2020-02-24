@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import DigitArea from './DigitArea';
 
-class App extends Component {
-  render() {
-    return (
-      <div className='App'>
-        <p>Keypad Application</p>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className='App'>
+      <DigitArea />
+    </div>
+  );
 }
 
 export default App;

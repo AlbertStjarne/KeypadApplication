@@ -1,0 +1,12 @@
+.digitButton {
+  width: 90px;
+  height: 43px;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font: 25px/34px 'Open Sans';
+  letter-spacing: 0;
+  color: #000000;
+  outline: none;
+}
