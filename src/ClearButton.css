@@ -1,0 +1,19 @@
+.clearButton {
+  background-color: #f57e7e;
+  width: 106px;
+  height: 44px;
+  border-radius: 6px;
+  opacity: 0.5;
+  margin: 16px 20px 0 7px;
+  align-items: flex-start;
+  text-align: center;
+  font: 20px/27px 'Open Sans';
+  letter-spacing: 0;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.clearButton:active {
+  opacity: 1;
+}

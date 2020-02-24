@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DigitButton from './DigitButton';
 import NonDigitButton from './NonDigitButton';
 import LoginButton from './LoginButton';
+import ClearButton from './ClearButton';
 import CodeOutputBox from './CodeOutputBox';
 import './DigitArea.css';
 
@@ -18,6 +19,7 @@ class DigitArea extends Component {
 
     this.randomizeArrayValues = this.randomizeArrayValues.bind(this);
     this.saveDigitInput = this.saveDigitInput.bind(this);
+    this.deleteLastInput = this.deleteLastInput.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +42,18 @@ class DigitArea extends Component {
     this.setState({
       digitAreaKeys: array,
     });
+  }
+
+  // deleting last entered digit
+  deleteLastInput() {
+    if (this.state.enteredCode.length > 0) {
+      let newCode = this.state.enteredCode;
+      newCode.pop(); // removing last item
+      this.setState({
+        enteredCode: newCode,
+      });
+    }
+    return;
   }
 
   // saving entered digit to state
@@ -71,6 +85,7 @@ class DigitArea extends Component {
         </div>
         <div className='loginAndClear'>
           <LoginButton enteredCode={this.state.enteredCode} />
+          <ClearButton deleteLastInput={this.deleteLastInput} />
         </div>
       </div>
     );
