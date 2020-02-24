@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DigitButton from './DigitButton';
 import NonDigitButton from './NonDigitButton';
+import CodeOutputBox from './CodeOutputBox';
 import './DigitArea.css';
 
 class DigitArea extends Component {
@@ -26,7 +27,7 @@ class DigitArea extends Component {
     return (
       <div className='DigitArea'>
         <p className='text'>Logga in med personlig kod</p>
-        {/* <CodeOutputBox  /> */}
+        <CodeOutputBox code={this.state.enteredCode} />
         <div className='digitArea'>
           {this.state.digitAreaKeys.map((digit, id) => {
             if (digit === '') {
